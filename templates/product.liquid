@@ -116,6 +116,15 @@
         {{ product.description }}
       </div>
 
+    {% assign metadata = product.metafields.designkind %}
+    <ul>
+      <li>artisan: {{ metadata.artisan }}</li>
+      <li>Dimensions and Materials: {{ metadata.details }}</li>
+      <li>Care instructions: {{ metadata.care }}</li>
+    </ul>
+<div>
+  <p>WE ARE AWESOME</p>
+</div>
       {% comment %}
         If the user is on a collection product page (ie with /collections/collection-handle/products/product-handle)
         in the URL, we can show next/previous links to other products in the collection.
